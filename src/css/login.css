@@ -1,0 +1,150 @@
+.login-app-container
+{
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.sign-in-title
+{
+    margin:48px 0px 0px 0px ;
+    padding: 0;
+    font-size: 22px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.username-label
+{
+    margin: 24px 0px 0px 0px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: #3c3c3c;
+}
+
+.sign-up-label
+{
+    margin: 16px 0px 0px 0px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: #3c3c3c;
+}
+
+.username-textbox
+{
+    height: 38px;
+    margin: 8px 0 0px 0;
+    padding: 8px 0 8px 8px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #3c3c3c;
+    border-radius: 4px;
+    border: 1px solid #bbbbbb;
+}
+
+.validation-error
+{
+    border: 1px;
+    border-style: solid;
+    border-color: #ee4444;
+}
+
+.validation-error-message
+{
+    border: solid 1px #bbbbbb;
+    border-radius: 4px;
+    background-color: #dcdcdc;
+}
+
+.validation-error-message-hidden
+{
+    display: none;
+}
+
+.next-button
+{
+    margin: 12px 0 12px 0;
+    padding: 8px 0 8px 0;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+    background-color: #0696d7;
+    height: 38px;
+}
+
+.footer
+{
+    margin: 0 30px 0px 30px;
+    padding: 0 0 12px 0;
+}
+
+.no-margin-padding
+{
+    padding: 0;
+    margin: 0;
+}
+
+.no-margin-left
+{
+    padding: 0;
+    margin-left: 0;
+}
+
+.no-margin-right
+{
+    padding: 0;
+    margin-right: 0;
+}
+
+.label-text
+{
+    font-size: 16px;
+    line-height: 22px;
+    color: #3c3c3c;
+}
+
+.description-text
+{
+    font-size: 14px;
+    line-height: 20px;
+    color: #808080;
+}
+
+.footer-text
+{
+    font-size: 14px;
+    line-height: 20px;
+    color: #999999;
+}
+
+.hyperlink 
+{
+    font-size: 14px;
+    line-height: 20px;
+    color: #006eaf;
+}
+
+.hyperlink:hover 
+{
+    text-decoration: underline;
+}
+
+.sign-up-toast
+{
+    opacity: 1!important;
+    position: absolute;
+    background-color: #00bfff;
+    height: 50px;
+    margin:0 30px 0 30px;
+    top:12px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.toast-body
+{
+    opacity: 1!important;
+}

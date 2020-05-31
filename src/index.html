@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <title>AutoDesk Test</title>
+</head>
+
+<body>
+    <main role="main" class="container login-app-container w-100">
+        <div id="carouselExampleIndicators h-100 w-100" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="carousel-inner">         
+                <div class="carousel-item w-100 h-100">
+                    <!--Sign-in-username-error-->
+                    <h1 class="mt-5 sign-in-title">Profile</h1>
+                    <form class="w-100">
+                        <div class="form-group w-100 no-margin-padding">
+                            <label for="profile-username" class="username-label">Username</label>
+                            <input type="text" class="form-control w-100 username-textbox" id="profile-username" readonly>
+                        </div>
+                        <button onclick="next()" type="button" class="btn btn-primary w-100 next-button">Logout</button>
+                    </form>
+                </div>
+                <div class="carousel-item w-100 h-100 active">
+                    <!--Sign-in-username-error-->
+                    <h1 class="mt-5 sign-in-title">Sign in</h1>
+                    <form class="w-100">
+                        <div class="form-group w-100 no-margin-padding">
+                            <label for="username" class="username-label">Username</label>
+                            <input type="text" class="form-control w-100 username-textbox" id="username"
+                                placeholder="Enter username">                                
+                            <input id="usernameErrorMessage" class="form-control validation-error-message-hidden" type="text" placeholder="The username is not recognized." readonly>
+                        </div>
+                        <button id="nextButton" onclick="validateUserName()" type="button" class="btn btn-primary w-100 next-button">Next</button>
+                    </form>
+                    <p class="text-center description-text">New to Autodesk?
+                        <a class="hyperlink" href="#">Create account</a>
+                    </p>
+                </div>       
+                <div class="carousel-item w-100 h-100">
+                    <h1 class="mt-5 sign-in-title">Create Account</h1>
+                    <form class="w-100">
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group no-margin-padding">
+                                    <label for="firstname" class="sign-up-label">First name</label>
+                                    <input type="text" class="form-control username-textbox" id="firstname"
+                                        placeholder="John">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group no-margin-padding">
+                                    <label for="lastname" class="sign-up-label">Last name</label>
+                                    <input type="text" class="form-control username-textbox" id="lastname"
+                                        placeholder="Smith">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group w-100  no-margin-padding">
+                            <label for="username" class="sign-up-label">Username</label>
+                            <input type="text" class="form-control w-100 username-textbox" id="username"
+                                placeholder="Type username">
+                        </div>
+                        <div class="form-group w-100  no-margin-padding">
+                            <label for="retypeusername" class="sign-up-label">Re-type username</label>
+                            <input type="text" class="form-control w-100 username-textbox" id="retypeusername"
+                                placeholder="Re-type username">
+                        </div>
+                        <div class="form-group w-100  no-margin-padding">
+                            <label for="password" class="sign-up-label">Password</label>
+                            <input type="passsword" class="form-control w-100 username-textbox" id="password"
+                                placeholder="Type password">
+                        </div>
+                        <div class="form-group w-100  no-margin-padding">
+                            <label for="retypepassword" class="sign-up-label">Password</label>
+                            <input type="passsword" class="form-control w-100 username-textbox" id="retypepassword"
+                                placeholder="Re-type password">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 next-button">Next</button>
+                    </form>
+                    <p class="text-center description-text">Already have an account. 
+                        <a class="hyperlink" href="#">Sign in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer fixed-bottom">
+        <div class="container text-center no-margin-padding">
+            <p class="no-margin-padding footer-text">Your account for everything Autodesk</p>
+            <a href="#" class="hyperlink">Learn more</a>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+        var validUserNames = ["john", "bob", "sam"];
+        var loggedInUser = '';
+
+        $(document).ready(function () {
+            // $('.toast').toast('show');
+            $('.carousel').carousel('pause');
+        });
+
+        function validateUserName()
+        {
+            var button = document.getElementById("nextButton");
+            button.innerText = "Verifying";
+            button.disabled = true;
+            var username = document.getElementById("username").value;
+            document.getElementById("username").classList.remove("validation-error");
+                document.getElementById("usernameErrorMessage").classList.remove("validation-error-message");
+                document.getElementById("usernameErrorMessage").classList.add("validation-error-message-hidden");
+            var isValidUsername = validUserNames.find((name)=> { return name === username;});
+            if(isValidUsername)
+            {
+                loggedInUser = username;
+                console.log(loggedInUser);
+                setTimeout(() => {  button.innerText = "Sign in"; button.disabled = false; /*go to profile*/}, 2000);
+            }
+            else
+            {
+                button.innerText = "Next";
+                button.disabled = false;
+                document.getElementById("username").classList.add("validation-error");
+                document.getElementById("usernameErrorMessage").classList.add("validation-error-message");
+                document.getElementById("usernameErrorMessage").classList.remove("validation-error-message-hidden");
+            }
+        }
+
+        function prev() {
+            $('.carousel').carousel('prev');
+            $('.carousel').carousel('pause');
+        }
+
+        function next() {
+            $('.carousel').carousel('next');
+            $('.carousel').carousel('pause');
+        }
+    </script>
+</body>
+
+</html>
