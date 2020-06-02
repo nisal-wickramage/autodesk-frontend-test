@@ -1,8 +1,17 @@
 # Autodesk Frontend Test
 Created to share my attempt at auto desk front end test.
 
-## References 
-https://webpack.js.org/guides/getting-started/
+## Source Structure
+.
++-- src
+|    +-- css
+|        +-- login.css
+|    +-- js
+|        +-- login.js
+|    +-- index.html
 
-https://getbootstrap.com/docs/4.0/getting-started/webpack/
-https://getbootstrap.com/docs/4.0/getting-started/theming/
+## Limitations 
+* key board navigation not fully implemented.
+
+## Assumptions
+* Content centered vertically.
