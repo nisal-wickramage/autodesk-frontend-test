@@ -4,10 +4,10 @@ Created to share my attempt at auto desk front end test.
 ## Source Structure
 ```
 .
-+-- src
-|    +-- css
++-- /src
+|    +-- /css
 |        +-- login.css
-|    +-- js
+|    +-- /js
 |        +-- login.js
 |    +-- index.html
 ```
