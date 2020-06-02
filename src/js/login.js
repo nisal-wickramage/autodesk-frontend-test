@@ -142,7 +142,6 @@ function validateUsername()
             button.disabled = false; 
             button.innerText = "Next"; 
             elementById("passwordpageUsername").innerText = username;
-            elementById("username").value = "";
             gotoNextScreen();
         }, 2000);
     }
@@ -173,6 +172,7 @@ function validatePassword()
             button.disabled = false; 
             button.innerText = "Sign in"; 
             elementById("password").value = "";
+            elementById("username").value = "";
             gotoNextScreen();
         }, 2000);
     }
