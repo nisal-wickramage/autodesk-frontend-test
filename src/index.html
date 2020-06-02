@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="css/login.css">
     <title>AutoDesk Test</title>
 </head>
@@ -96,9 +97,12 @@
                             account</a>
                     </p>
                 </div>
-                <div id="passwordpage" class="carousel-item w-100 h-100">
-                    <h1 class="mt-5 sign-in-title  text-center">Welcome</h1>
-                    <p id="passwordpageUsername" class="text-center description-text">John Smith</p>
+                <div id="passwordpage" class="carousel-item w-100 h-100">                    
+                    <h1 class="mt-5 sign-in-title  text-center">                        
+                        <i class="fas fa-chevron-left" data-target="#carouselExampleIndicators" data-slide-to="1"></i>
+                        Welcome
+                    </h1>
+                    <p id="passwordpageUsername" class="text-center description-text"></p>
                     <form class="w-100">
                         <div class="form-group w-100  no-margin-padding">
                             <label for="password" class="username-label label-text">Password</label>
@@ -117,7 +121,7 @@
                 </div>
                 <div id="profile" class="carousel-item w-100 h-100">
                     <h1 class="mt-5 sign-in-title  text-center">Hello</h1>
-                    <p id="profileUsername" class="text-center description-text">John Smith</p>
+                    <p id="profileUsername" class="text-center description-text"></p>
                     <button data-target="#carouselExampleIndicators" data-slide-to="1" type="button"
                         class="btn btn-primary w-100 next-button">Log out</button>
                 </div>

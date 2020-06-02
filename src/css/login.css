@@ -140,3 +140,11 @@
     background-color: #dcdcdc;
     color:#6d6c6c; 
 }
+
+h1 i 
+{
+    color: #0696d7;
+    position: absolute;
+    left: 30px;
+    top: 60px;
+}
