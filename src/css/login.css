@@ -19,18 +19,12 @@
 {
     margin: 24px 0px 0px 0px;
     padding: 0;
-    font-size: 16px;
-    line-height: 22px;
-    color: #3c3c3c;
 }
 
 .sign-up-label
 {
     margin: 16px 0px 0px 0px;
     padding: 0;
-    font-size: 16px;
-    line-height: 22px;
-    color: #3c3c3c;
 }
 
 .username-textbox
@@ -45,23 +39,11 @@
     border: 1px solid #bbbbbb;
 }
 
-.validation-error
+.is-invalid
 {
     border: 1px;
     border-style: solid;
     border-color: #ee4444;
-}
-
-.validation-error-message
-{
-    border: solid 1px #bbbbbb;
-    border-radius: 4px;
-    background-color: #dcdcdc;
-}
-
-.validation-error-message-hidden
-{
-    display: none;
 }
 
 .next-button
@@ -147,4 +129,14 @@
 .toast-body
 {
     opacity: 1!important;
+}
+
+.invalid-feedback
+{
+    margin-top: 0px;
+    padding: 5px;
+    border: solid 1px #bbbbbb;
+    border-radius: 0px 0px 4px 4px;
+    background-color: #dcdcdc;
+    color:#6d6c6c; 
 }
